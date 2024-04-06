@@ -1,0 +1,11 @@
+schema_version: 20180708
+name: rm_workers
+version: 0.0.43
+runtime: docker
+entrypoint: /bin/sh /function/init.sh
+memory: 1024
+timeout: 300
+triggers:
+- name: trigger-rm-workers
+  type: http
+  source: /function/init.sh
